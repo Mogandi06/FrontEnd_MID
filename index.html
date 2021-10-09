@@ -79,14 +79,6 @@
                         <div class="input-group">
 							<select class="form-select mb-3" id="faculty">
 								<option value="0" selected>-- SELECT FACULTY --</option>
-								<option value="Pascasarjana">Pascasarjana</option>
-								<option value="Filsafat">Fakultas Filsafat</option>
-								<option value="FKIP">Fakultas Keguruan dan Ilmu Pendidikan</option>
-								<option value="FEB">Fakultas Ekonomi dan Bisnis</option>
-								<option value="Pertanian">Fakultas Pertanian</option>
-								<option value="FIK">Fakultas Ilmu Komputer</option>
-								<option value="Keperawatan">Fakultas Keperawatan</option>
-								<option value="ASMI">Akademi Sekretari Manajemen Indonesia Klabat</option>
 							</select>
 						</div> 
                     </div>
@@ -95,21 +87,6 @@
                         <div class="input-group mb-3">
                             <select class="form-select" id="prodi">
 								<option class="0" value="0" selected>-- SELECT PROGRAM OF STUDY --</option>
-								<option class="Pascasarjana" value="Magister Manajemen">Magister Manajemen</option>
-								<option class="Pascasarjana" value="Magister Teologi">Magister Teologi</option>
-								<option class="Filsafat" value="Ilmu Filsafat">Ilmu Filsafat</option>
-								<option class="FKIP" value="Pendidikan Agama">Pendidikan Agama</option>
-								<option class="FKIP" value="Pendidikan Bahasa Inggris">Pendidikan Bahasa Inggris</option>
-								<option class="FKIP" value="Pendidikan Ekonomi">Pendidikan Ekonomi</option>
-								<option class="FKIP" value="Pendidikan Luar Sekolah">Pendidikan Luar Sekolah</option>
-								<option class="FEB" value="Akuntansi">Akuntansi</option>
-								<option class="FEB" value="Manajemen">Manajemen</option>
-								<option class="Pertanian" value="Agroteknologi">Agroteknologi</option>
-								<option class="FIK" value="Informatika">Informatika</option>
-								<option class="FIK" value="Sistem Informasi">Sistem Informasi</option>
-								<option class="Keperawatan" value="Ners">Profesi Ners</option>
-								<option class="Keperawatan" value="Keperawatan">Keperawatan</option>
-								<option class="ASMI" value="Sekretari (D3)">Sekretari (D3)</option>
 							</select>
                         </div>
                         <br>
@@ -128,18 +105,16 @@
                 <div class="input-group mb-3">
                     <select class="form-select" id="Facultyplt">
                         <option class="0" value="0" selected>-- SELECT PROGRAM OF STUDY --</option>
-                                    <option class="S2" value="Magister Manajemen">Magister Manajemen</option>
-                                    <option class="S2" value="Magister Teologi">Magister Teologi</option>
-                                    <option class="Filsafat" value="Ilmu Filsafat">Ilmu Filsafat</option>
-                                    <option class="FEB" value="Manajemen">Manajemen</option>
-                                    <option class="FEB" value="Akuntansi">Akuntansi</option>
-                                    <option class="FIK" value="Informatika">Informatika</option>
-                                    <option class="FIK" value="Sistem Informasi">Sistem Informasi</option>
-                                    <option class="Keperawatan" value="Ners">Profesi Ners</option>
-                                    <option class="Keperawatan" value="Keperawatan">Keperawatan</option>
-                                    <option class="ASMI" value="Sekretari (D3)">D3 Sekretari</option>
+                        <option value="Pascasarjana">Pascasarjana</option>
+                        <option value="Filsafat">Fakultas Filsafat</option>
+                        <option value="FKIP">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                        <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
+                        <option value="Pertanian">Fakultas Pertanian</option>
+                        <option value="FIK">Fakultas Ilmu Komputer</option>
+                        <option value="Keperawatan">Fakultas Keperawatan</option>
+                        <option value="ASMI">Akademi Sekretari Manajemen Indonesia Klabat</option>
                     </select>
-                   <button type="button" class="cssbtn btn btn-info" onclick="FilterStudy()" style="background-color: #212121; color: #F6F6F6; width: 100%;">Show Students</button>
+                   <button type="button" class="cssbtn btn btn-info" onclick="FacultyPilter()" style="background-color: #212121; color: #F6F6F6; width: 100%;">Show Students</button>
                     <br>
                    
                    <label for="prodi" class="form-label fw-bold">Program Of Study</label>
@@ -157,17 +132,18 @@
                                         <option class="Keperawatan" value="Keperawatan">Keperawatan</option>
                                         <option class="ASMI" value="Sekretari (D3)">D3 Sekretari</option>
                         </select>
-                        <button type="button" class="cssbtn btn btn-info" onclick="FilterStudy()" style="background-color: #212121; color: #F6F6F6; width: 100%;">Show Students</button>
+                        <button type="button" class="cssbtn btn btn-info" onclick="ProdiPilter()" style="background-color: #212121; color: #F6F6F6; width: 100%;">Show Students</button>
                     </div>
                 </div>
             </form>
             
-            <div class="container">
+            <div class="container ">
             <hr>
                 <h2 style="text-align: center;">Our Student</h2>
             <hr>
             
             <input type="text" class="form-control" onkeyup="FilterName()" id="nameSearch" placeholder="Search student by name ..."><br>
+            <div class="container table-responsive">
             <table class="table table-hover" id="dtMahasiswa">
                 <thead>
                     <tr>
@@ -184,6 +160,7 @@
                     
                 </tbody>
             </table>
+          </div>
             </div>
             
         </div>
@@ -196,6 +173,7 @@
 
 </body>
 <script src="form.js"></script>
+<script src="filter.js"></script>
 
 
 </html>
