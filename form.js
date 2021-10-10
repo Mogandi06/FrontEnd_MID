@@ -94,7 +94,7 @@ function loadDataMahasiswa() {
         for (key in student) {
             let td = document.createElement("td");
             td.appendChild(document.createTextNode(student[key]));
-            td.namaClass = [key];
+            td.className = [key];
             tr.appendChild(td);
         }
 
@@ -121,26 +121,24 @@ function hapusBaris(btn) {
 
 //Search
 const SearchNama = () => {
-    let filter = document.getElementById('cariNama').value.toUpperCase;
+    let filter = document.getElementById('cariNama').value.toUpperCase();
 
-    let Mytabel = document.getElementById('dtMahasiswa')
+    let Mytabel = document.getElementById('mahasiswa')
 
     let tr = Mytabel.getElementsByTagName('tr')
 
     for (var i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName('td')[0];
+        let td = tr[i].getElementsByClassName('fullName')[0];
 
         if (td) {
-            let textvalue = td.textContent || td.innerHTML;
+            let textvalue = td.textContent || td.innerHTML || td.value;
 
             if (textvalue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "f";
+                tr[i].style.display = "";
 
             } else {
                 tr[i].style.display = "none";
             }
         }
     }
-
-
 }
