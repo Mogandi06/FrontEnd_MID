@@ -39,6 +39,30 @@ tmblSbmit.addEventListener("click", () => {
         document.querySelector("#faculty").options[
             document.querySelector("#faculty").selectedIndex
         ].value;
+    if (tambah_faculty == 'Akademi Sekretari Manajemen Indonesia Klabat') {
+        tambah_faculty = 'ASMIK';
+    }
+    if (tambah_faculty == 'Fakultas Ekonomi dan Bisnis') {
+        tambah_faculty = 'FEB';
+    }
+    if (tambah_faculty == 'Fakultas Filsafat') {
+        tambah_faculty = 'FIL';
+    }
+    if (tambah_faculty == 'Fakultas Ilmu Komputer') {
+        tambah_faculty = 'FIK';
+    }
+    if (tambah_faculty == 'Fakultas Keguruan dan Ilmu Pendidikan') {
+        tambah_faculty = 'FKIP';
+    }
+    if (tambah_faculty == 'Fakultas Keperawatan') {
+        tambah_faculty = 'FKEP';
+    }
+    if (tambah_faculty == 'Fakultas Pertanian') {
+        tambah_faculty = 'PERTANIAN';
+    }
+    if (tambah_faculty == 'Pascasarjana') {
+        tambah_faculty = 'PASCASARJANA';
+    }
     let tambah_program_study =
         document.querySelector("#prodi").options[
             document.querySelector("#prodi").selectedIndex
@@ -48,7 +72,6 @@ tmblSbmit.addEventListener("click", () => {
         alert("StudentNim : ERROR🚨");
         return;
     }
-
     if (/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(tambah_nama) != true) {
         alert("StudentName : ERROR🚨");
         return;
@@ -58,12 +81,10 @@ tmblSbmit.addEventListener("click", () => {
         alert("Faculty : ERROR🚨");
         return;
     }
-
     if (tambah_program_study == "-- SELECT PROGRAM OF STUDY --") {
         alert("Program Study : ERROR🚨");
         return;
     }
-
     if (dataMahasiswa.map((s) => s.nim).includes(tambah_nim) == true) {
         alert(`DOUBLE NIM: ERROR🚨`);
         return;
