@@ -38,10 +38,7 @@ tmblSbmit.addEventListener("click", () => {
     if (pilih_genderP == true) {
         pilih_gender = "Female";
     }
-    if (pilih_gender == '' && pilih_genderP == '') {
-        alert("Gender  : ERRORnoInput🚨");
-        return;
-    }
+
 
     let pilih_faculty = document.querySelector("#faculty").options[
         document.querySelector("#faculty").selectedIndex].value;
@@ -86,9 +83,9 @@ tmblSbmit.addEventListener("click", () => {
         return;
     }
 
-    if ((pilih_gender[0].checked == false) && (pilih_gender[1].checked == false)) {
+    if (pilih_gender == '' && pilih_genderP == '') {
         alert("Gender  : ERRORnoInput🚨");
-        return false;
+        return;
     }
 
     if (document.querySelector("#faculty").selectedIndex < 1) {

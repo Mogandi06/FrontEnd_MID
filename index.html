@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: #212121">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Student Management MiniApp</a>
@@ -66,24 +67,24 @@
           <div class="collapse" id="collapseWidthExample">
             <div class="card card-body" style="background-color: #f6f6f6">
               <div class="form-group">
-                <form id="FormMahasiswa">
+                <form class="needs-validation" id="FormMahasiswa">
                   <div class="mb-3">
                     <label for="nim" class="form-label fw-bold">Student ID (NIM)</label>
-                    <input type="text" class="form-control" id="nim" placeholder="105022010023" />
+                    <input type="text" class="form-control" id="nim" placeholder="105022010023" required>
                   </div>
 
                   <div class="mb-3">
                     <label for="nama" class="form-label fw-bold">Full Name</label>
-                    <input type="text" class="form-control" id="nama" placeholder="Abram, Mogandi Timotius" />
+                    <input type="text" class="form-control" id="nama" placeholder="Abram, Mogandi Timotius" required>
                   </div>
 
                   <label for="gender" class="form-label fw-bold">Gender</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="pria" />
+                    <input class="form-check-input" type="radio" name="gender" id="pria" required>
                     <label class="form-check-label" for="pria"> Male </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="wanita" />
+                    <input class="form-check-input" type="radio" name="gender" id="wanita" required>
                     <label class="form-check-label" for="wanita">
                       Female
                     </label>
@@ -95,7 +96,7 @@
             <div class="form-group">
               <label for="faculty" class="form-label fw-bold">Faculty</label>
               <div class="input-group">
-                <select class="form-select mb-3" id="faculty">
+                <select class="form-select mb-3" id="faculty" required>
                   <option value="0">--SELECT FACULTY--</option>
                 </select>
               </div>
@@ -103,7 +104,7 @@
 
             <label for="prodi" class="form-label fw-bold">Program Of Study</label>
             <div class="input-group mb-3">
-              <select class="form-select" id="prodi">
+              <select class="form-select" id="prodi" required>
                 <option class="0" value="0">
                   --SELECT PROGRAM OF STUDY--
                 </option>
@@ -124,7 +125,7 @@
       <div class="input-group mb-3">
         <select class="form-select" id="Facultyplt">
           <option class="0" value="0" selected>
-            -- SELECT PROGRAM OF STUDY --
+            -- SELECT FACULTY--
           </option>
           <option value="Pascasarjana">Pascasarjana</option>
           <option value="Filsafat">Fakultas Filsafat</option>
