@@ -28,42 +28,51 @@ const tmblSbmit = document.querySelector("#buttonApakek");
 tmblSbmit.addEventListener("click", () => {
     let tambah_nim = document.querySelector("#nim").value;
     let tambah_nama = document.querySelector("#nama").value;
-    let tambah_gender = document.querySelector("input#pria").checked;
-    if (tambah_gender == true) {
-        tambah_gender = "Male";
-    } else {
-        tambah_gender = "Female";
+    let pilih_gender = document.querySelector("input#pria").checked;
+    let pilih_genderP = document.querySelector("input#wanita").checked;
+
+    if (pilih_gender == true) {
+        pilih_gender = "Male";
     }
 
-    let tambah_faculty =
-        document.querySelector("#faculty").options[
-            document.querySelector("#faculty").selectedIndex
-        ].value;
-    if (tambah_faculty == 'Akademi Sekretari Manajemen Indonesia Klabat') {
-        tambah_faculty = 'ASMIK';
+    if (pilih_genderP == true) {
+        pilih_gender = "Female";
     }
-    if (tambah_faculty == 'Fakultas Ekonomi dan Bisnis') {
-        tambah_faculty = 'FEB';
+    if (pilih_gender == '' && pilih_genderP == '') {
+        alert("Gender  : ERRORnoInput🚨");
+        return;
     }
-    if (tambah_faculty == 'Fakultas Filsafat') {
-        tambah_faculty = 'FIL';
+
+    let pilih_faculty = document.querySelector("#faculty").options[
+        document.querySelector("#faculty").selectedIndex].value;
+    if (pilih_faculty == 'Akademi Sekretari Manajemen Indonesia Klabat') {
+        pilih_faculty = 'ASMIK';
     }
-    if (tambah_faculty == 'Fakultas Ilmu Komputer') {
-        tambah_faculty = 'FIK';
+    if (pilih_faculty == 'Fakultas Ekonomi dan Bisnis') {
+        pilih_faculty = 'FEB';
     }
-    if (tambah_faculty == 'Fakultas Keguruan dan Ilmu Pendidikan') {
-        tambah_faculty = 'FKIP';
+    if (pilih_faculty == 'Fakultas Filsafat') {
+        pilih_faculty = 'FIL';
     }
-    if (tambah_faculty == 'Fakultas Keperawatan') {
-        tambah_faculty = 'FKEP';
+    if (pilih_faculty == 'Fakultas Ilmu Komputer') {
+        pilih_faculty = 'FIK';
     }
-    if (tambah_faculty == 'Fakultas Pertanian') {
-        tambah_faculty = 'PERTANIAN';
+    if (pilih_faculty == 'Fakultas Keguruan dan Ilmu Pendidikan') {
+        pilih_faculty = 'FKIP';
     }
-    if (tambah_faculty == 'Pascasarjana') {
-        tambah_faculty = 'PASCASARJANA';
+    if (pilih_faculty == 'Fakultas Keperawatan') {
+        pilih_faculty = 'FKEP';
     }
-    let tambah_program_study =
+    if (pilih_faculty == 'Fakultas Pertanian') {
+        pilih_faculty = 'PERTANIAN';
+    }
+    if (pilih_faculty == 'Pascasarjana') {
+        pilih_faculty = 'PASCASARJANA';
+    }
+    if (pilih_faculty == '--SELECT FACULTY--') {
+        pilih_faculty = 'error Nih';
+    }
+    let pilih_prodi =
         document.querySelector("#prodi").options[
             document.querySelector("#prodi").selectedIndex
         ].value;
@@ -77,11 +86,17 @@ tmblSbmit.addEventListener("click", () => {
         return;
     }
 
-    if (tambah_faculty == "-- SELECT FACULTY --") {
+    if ((pilih_gender[0].checked == false) && (pilih_gender[1].checked == false)) {
+        alert("Gender  : ERRORnoInput🚨");
+        return false;
+    }
+
+    if (document.querySelector("#faculty").selectedIndex < 1) {
         alert("Faculty : ERROR🚨");
         return;
     }
-    if (tambah_program_study == "-- SELECT PROGRAM OF STUDY --") {
+
+    if (document.querySelector("#prodi").selectedIndex < 1) {
         alert("Program Study : ERROR🚨");
         return;
     }
@@ -90,12 +105,16 @@ tmblSbmit.addEventListener("click", () => {
         return;
     }
 
+
+
+
+
     dataMahasiswa.push({
         nim: tambah_nim,
         nama: tambah_nama,
-        gender: tambah_gender,
-        fakultas: tambah_faculty,
-        study: tambah_program_study,
+        gender: pilih_gender,
+        fakultas: pilih_faculty,
+        study: pilih_prodi,
     });
 
     alert(`${tambah_nama} added.`);

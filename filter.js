@@ -46,6 +46,13 @@ function ProdiPilter() {
     }
 }
 
+var form = document.getElementById("FormMahasiswa");
+
+function handleForm(event) {
+    event.preventDefault();
+}
+form.addEventListener('submit', handleForm);
+
 let selection = {
     "Akademi Sekretari Manajemen Indonesia Klabat": ["Sekretari (D3)"],
     "Fakultas Ekonomi dan Bisnis": ["Akuntansi", "Manajemen"],
@@ -59,7 +66,7 @@ let selection = {
     ],
     "Fakultas Keperawatan": ["Keperawatan", "Profesi Ners"],
     "Fakultas Pertanian": ["Agroteknologi"],
-    Pascasarjana: ["Magister Manajemen", "Magister Teologi"],
+    "Pascasarjana": ["Magister Manajemen", "Magister Teologi"],
 };
 
 window.onload = function () {

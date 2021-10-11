@@ -66,145 +66,147 @@
           <div class="collapse" id="collapseWidthExample">
             <div class="card card-body" style="background-color: #f6f6f6">
               <div class="form-group">
-                <div class="mb-3">
-                  <label for="nim" class="form-label fw-bold">Student ID (NIM)</label>
-                  <input type="text" class="form-control" id="nim" placeholder="105022010023" />
-                </div>
+                <form id="FormMahasiswa">
+                  <div class="mb-3">
+                    <label for="nim" class="form-label fw-bold">Student ID (NIM)</label>
+                    <input type="text" class="form-control" id="nim" placeholder="105022010023" />
+                  </div>
 
-                <div class="mb-3">
-                  <label for="nama" class="form-label fw-bold">Full Name</label>
-                  <input type="text" class="form-control" id="nama" placeholder="Abram, Mogandi Timotius" />
-                </div>
+                  <div class="mb-3">
+                    <label for="nama" class="form-label fw-bold">Full Name</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Abram, Mogandi Timotius" />
+                  </div>
 
-                <label for="gender" class="form-label fw-bold">Gender</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="pria" />
-                  <label class="form-check-label" for="pria"> Male </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="wanita" />
-                  <label class="form-check-label" for="wanita">
-                    Female
-                  </label>
-                </div>
+                  <label for="gender" class="form-label fw-bold">Gender</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="pria" />
+                    <label class="form-check-label" for="pria"> Male </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="wanita" />
+                    <label class="form-check-label" for="wanita">
+                      Female
+                    </label>
+                </form>
               </div>
-              <br>
+            </div>
+            <br>
 
-              <div class="form-group">
-                <label for="faculty" class="form-label fw-bold">Faculty</label>
-                <div class="input-group">
-                  <select class="form-select mb-3" id="faculty">
-                    <option value="0" selected>-- SELECT FACULTY --</option>
-                  </select>
-                </div>
-              </div>
-
-              <label for="prodi" class="form-label fw-bold">Program Of Study</label>
-              <div class="input-group mb-3">
-                <select class="form-select" id="prodi">
-                  <option class="0" value="0" selected>
-                    -- SELECT PROGRAM OF STUDY --
-                  </option>
+            <div class="form-group">
+              <label for="faculty" class="form-label fw-bold">Faculty</label>
+              <div class="input-group">
+                <select class="form-select mb-3" id="faculty">
+                  <option value="0">--SELECT FACULTY--</option>
                 </select>
               </div>
-              <br>
-              <input class="btn btn-primary" type="submit" id="buttonApakek" value="Submit"
-                style="background-color: #212121; width: 100%" />
             </div>
+
+            <label for="prodi" class="form-label fw-bold">Program Of Study</label>
+            <div class="input-group mb-3">
+              <select class="form-select" id="prodi">
+                <option class="0" value="0">
+                  --SELECT PROGRAM OF STUDY--
+                </option>
+              </select>
+            </div>
+            <br>
+            <input class="btn btn-primary" type="submit" id="buttonApakek" value="Submit"
+              style="background-color: #212121; width: 100%" />
           </div>
-        </div>
-      </div>
-
-      <form class="col-md-4">
-        <h3 class="fw-bold">Filter Student By</h3>
-        <br>
-        <label for="faculty" class="form-label fw-bold">Faculty</label>
-        <div class="input-group mb-3">
-          <select class="form-select" id="Facultyplt">
-            <option class="0" value="0" selected>
-              -- SELECT PROGRAM OF STUDY --
-            </option>
-            <option value="Pascasarjana">Pascasarjana</option>
-            <option value="Filsafat">Fakultas Filsafat</option>
-            <option value="FKIP">
-              Fakultas Keguruan dan Ilmu Pendidikan
-            </option>
-            <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
-            <option value="Pertanian">Fakultas Pertanian</option>
-            <option value="FIK">Fakultas Ilmu Komputer</option>
-            <option value="Keperawatan">Fakultas Keperawatan</option>
-            <option value="ASMI">
-              Akademi Sekretari Manajemen Indonesia Klabat
-            </option>
-          </select>
-          <button type="button" class="cssbtn btn btn-info" onclick="FacultyPilter()"
-            style="background-color: #212121; color: #f6f6f6; width: 100%">
-            Show Students
-          </button>
-          <br>
-
-          <label for="prodi" class="form-label fw-bold">Program Of Study</label>
-          <div class="input-group mb-3">
-            <select class="form-select" id="Prodiplt">
-              <option class="0" value="0" selected>
-                -- SELECT PROGRAM OF STUDY --
-              </option>
-              <option class="PascaSarjana" value="Magister Manajemen">
-                Magister Manajemen
-              </option>
-              <option class="PascaSarjana" value="Magister Teologi">
-                Magister Teologi
-              </option>
-              <option class="Filsafat" value="Ilmu Filsafat">
-                Ilmu Filsafat
-              </option>
-              <option class="FEB" value="Manajemen">Manajemen</option>
-              <option class="FEB" value="Akuntansi">Akuntansi</option>
-              <option class="FIK" value="Informatika">Informatika</option>
-              <option class="FIK" value="Sistem Informasi">
-                Sistem Informasi
-              </option>
-              <option class="Keperawatan" value="Ners">Profesi Ners</option>
-              <option class="Keperawatan" value="Keperawatan">
-                Keperawatan
-              </option>
-              <option class="ASMI" value="Sekretari (D3)">
-                D3 Sekretari
-              </option>
-            </select>
-            <button type="button" class="cssbtn btn btn-info" onclick="ProdiPilter()"
-              style="background-color: #212121; color: #f6f6f6; width: 100%">
-              Show Students
-            </button>
-          </div>
-        </div>
-      </form>
-
-      <div class="container">
-        <hr>
-        <h2 style="text-align: center">Our Student</h2>
-        <hr>
-
-        <input type="text" class="form-control" id="cariNama" placeholder="Search student by name ..."
-          onkeyup="SearchNama()"><br>
-        <div class="container table-responsive">
-          <table class="table table-hover" id="dtMahasiswa">
-            <thead>
-              <tr>
-                <th>NIM</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Faculty</th>
-                <th>Program Study</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-
-            <tbody id="mahasiswa"></tbody>
-          </table>
         </div>
       </div>
     </div>
+
+    <form class="col-md-4">
+      <h3 class="fw-bold">Filter Student By</h3>
+      <br>
+      <label for="faculty" class="form-label fw-bold">Faculty</label>
+      <div class="input-group mb-3">
+        <select class="form-select" id="Facultyplt">
+          <option class="0" value="0" selected>
+            -- SELECT PROGRAM OF STUDY --
+          </option>
+          <option value="Pascasarjana">Pascasarjana</option>
+          <option value="Filsafat">Fakultas Filsafat</option>
+          <option value="FKIP">
+            Fakultas Keguruan dan Ilmu Pendidikan
+          </option>
+          <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
+          <option value="Pertanian">Fakultas Pertanian</option>
+          <option value="FIK">Fakultas Ilmu Komputer</option>
+          <option value="Keperawatan">Fakultas Keperawatan</option>
+          <option value="ASMI">
+            Akademi Sekretari Manajemen Indonesia Klabat
+          </option>
+        </select>
+        <button type="button" class="cssbtn btn btn-info" onclick="FacultyPilter()"
+          style="background-color: #212121; color: #f6f6f6; width: 100%">
+          Show Students
+        </button>
+        <br>
+
+        <label for="prodi" class="form-label fw-bold">Program Of Study</label>
+        <div class="input-group mb-3">
+          <select class="form-select" id="Prodiplt">
+            <option class="0" value="0" selected>
+              -- SELECT PROGRAM OF STUDY --
+            </option>
+            <option class="PascaSarjana" value="Magister Manajemen">
+              Magister Manajemen
+            </option>
+            <option class="PascaSarjana" value="Magister Teologi">
+              Magister Teologi
+            </option>
+            <option class="Filsafat" value="Ilmu Filsafat">
+              Ilmu Filsafat
+            </option>
+            <option class="FEB" value="Manajemen">Manajemen</option>
+            <option class="FEB" value="Akuntansi">Akuntansi</option>
+            <option class="FIK" value="Informatika">Informatika</option>
+            <option class="FIK" value="Sistem Informasi">
+              Sistem Informasi
+            </option>
+            <option class="Keperawatan" value="Ners">Profesi Ners</option>
+            <option class="Keperawatan" value="Keperawatan">
+              Keperawatan
+            </option>
+            <option class="ASMI" value="Sekretari (D3)">
+              D3 Sekretari
+            </option>
+          </select>
+          <button type="button" class="cssbtn btn btn-info" onclick="ProdiPilter()"
+            style="background-color: #212121; color: #f6f6f6; width: 100%">
+            Show Students
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="container">
+      <hr>
+      <h2 style="text-align: center">Our Student</h2>
+      <hr>
+
+      <input type="text" class="form-control" id="cariNama" placeholder="Search student by name ..."
+        onkeyup="SearchNama()"><br>
+      <div class="container table-responsive">
+        <table class="table table-hover" id="dtMahasiswa">
+          <thead>
+            <tr>
+              <th>NIM</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Faculty</th>
+              <th>Program Study</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="mahasiswa"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
   </div>
 
   <footer class="py-3 my-4">
